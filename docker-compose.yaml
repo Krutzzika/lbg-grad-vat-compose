@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.3"
 services:
     calc-api:
         image: krutzika/lbg-grad-compose-api
@@ -8,7 +8,8 @@ services:
                 published: 8080
     front-a:
         image: krutzika/lbg-grad-compose-front-a
-        build: ./frontend-1
+        build: 
+        context: ./frontend-1
         ports:
             -   target: 80
                 published: 80
